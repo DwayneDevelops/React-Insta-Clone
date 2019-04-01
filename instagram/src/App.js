@@ -2,12 +2,14 @@ import React from 'react';
 
 import './App.css';
 import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends React.Component {
   constructor() {
     super();
       this.state = {
-      data: dummyData
+      posts: dummyData
     } 
 
   }
@@ -16,22 +18,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header className="instagram-container">
+          <SearchBar />
+          {this.state.posts.map((post) => <PostContainer key={post.timestamp} post={post} />)}
         </header>
       </div>
     );
   }
 }
+
+
 
 export default App;
