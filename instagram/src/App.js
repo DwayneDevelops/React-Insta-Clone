@@ -18,10 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="instagram-container">
+        <div className="instagram-container">
           <SearchBar />
-          {this.state.posts.map((post) => <PostContainer key={post.timestamp} post={post} />)}
-        </header>
+        </div>
+        {this.state.posts.map((post) => <PostContainer key={post.id} post={post} />)}
+
       </div>
     );
   }

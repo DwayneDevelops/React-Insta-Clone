@@ -1,11 +1,18 @@
 import React from 'react';
 
 
-function CommentSection(props) {
+const CommentSection = props => {
     return (
         <div className='commentSection'>
-            <h3>{props.likes}</h3>
-            <p><h3>{props.username}</h3>{props.text}</p>  
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <div>
+                <h3>{props.likes}</h3>
+            </div>
+            
+            <p><h3>{props.comment.username}</h3>{props.comment.text}</p>
+
+            {props.timestamp} 
             <input value="" placeholder='Add a comment...' />
         </div>
     )
