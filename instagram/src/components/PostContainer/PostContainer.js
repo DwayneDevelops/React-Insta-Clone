@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection'
 
+
 function PostContainer(props) {
   return (
     <div className='postContainer'>
@@ -11,8 +12,7 @@ function PostContainer(props) {
         </div>
         <img src={props.post.imageUrl} alt='main post image' />
         <div>
-            {props.post.comments.map (comment => <CommentSection key={comment.id} comment={comment} />)}
-            
+            <CommentSection />
         </div>         
     </div>        
   );

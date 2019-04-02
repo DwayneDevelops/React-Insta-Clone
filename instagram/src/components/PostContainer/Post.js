@@ -1,7 +1,12 @@
 import React from 'react';
 
-function Post(props) {
+const Post = (props) => {
     return(
-        
+        <div className="post">
+            <div>{props.post}</div>
+
+        </div>
     )
 }
+
+export default Post;

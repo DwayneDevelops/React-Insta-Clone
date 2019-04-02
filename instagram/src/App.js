@@ -26,7 +26,6 @@ class App extends React.Component {
           <SearchBar />
         </div>
         {this.state.posts.map((post) => <PostContainer key={post.id} post={post} />)}
-
       </div>
     );
   }

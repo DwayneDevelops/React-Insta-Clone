@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from './Comment';
 
 
 function CommentSection(props) {
@@ -6,13 +7,9 @@ function CommentSection(props) {
         <div className='commentSection'>
             <i className="far fa-heart"></i>
             <i className="far fa-comment"></i>
-            <div>
-                <h3>{props.likes}</h3>
-            </div>
-            <h3>{props.comment.username}</h3>
-            <p>{props.comment.text}</p>
-
-            {props.timestamp} 
+        
+            <Comment />
+                        
             <input value="" placeholder='Add a comment...' />
         </div>
     )

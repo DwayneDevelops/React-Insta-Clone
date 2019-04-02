@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 function SearchBar() {
   return (
@@ -6,7 +6,7 @@ function SearchBar() {
       <div>
         <i className="fab fa-instagram"></i> | Instagram
       </div>
-  <input value='' placeholder='' />
+  <input value='' placeholder='Search' />
       <div className="headerIcons">
         <i className="far fa-compass"></i>
         <i className="far fa-heart"></i>
