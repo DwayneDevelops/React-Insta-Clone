@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = props => {
+function PostContainer(props) {
   return (
     <div className='postContainer'>
-        <div className='post-header'>
+        <div className='postHeader'>
             <img src={props.post.thumbnailUrl} alt='profile thumbnail' />
             <h3>{props.post.username}</h3>
         </div>
-        <img src={'props.post.imageUrl'} alt='main post image' />
+        <img src={props.post.imageUrl} alt='main post image' />
         <div>
             {props.post.comments.map (comment => <CommentSection key={comment.id} comment={comment} />)}
             
