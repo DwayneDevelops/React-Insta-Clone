@@ -3,6 +3,10 @@ import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login';
+import withAuthenticate from './authentication/withAuthenticate';
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)
  
 class App extends React.Component {
   constructor() {
@@ -21,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostsPage posts={this.state.posts} />)}
+        <ComponentFromWithAuthenticate posts={this.state.posts} />
       </div>
     );
   }
