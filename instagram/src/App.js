@@ -22,10 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="instagram-container">
-          <SearchBar />
-        </div>
-        {this.state.posts.map((post) => <PostContainer key={post.id} post={post} />)}
+        <SearchBar />
+        <PostContainer posts={this.state.posts} />)}
       </div>
     );
   }

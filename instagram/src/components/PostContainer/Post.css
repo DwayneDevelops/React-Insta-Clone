@@ -1,0 +1,10 @@
+.postHeader {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 1%;
+}

@@ -1,34 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from '../CommentSection/CommentSection'
+import Post from './Post';
+
+import './PostContainer.css'
 
 
-function PostContainer(props) {
+
+const PostContainer = props => {
   return (
     <div className='postContainer'>
-        <div className='postHeader'>
-            <img src={props.post.thumbnailUrl} alt='profile thumbnail' />
-            <h3>{props.post.username}</h3>
-        </div>
-        <img src={props.post.imageUrl} alt='main post image' />
-        <div>
-            <CommentSection />
-        </div>         
+      {props.posts.map(p => <Post post={p} key={p.id} />)}
     </div>        
   );
 }
 
-    PostContainer.propTypes = {
-        post: PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            username: PropTypes.string.isRequired,
-            thumbnailUrl: PropTypes.string.isRequired,
-            imageUrl: PropTypes.string.isRequired,
-            likes: PropTypes.number.isRequired,
-            timestamp: PropTypes.string.isRequired,
-            comments: PropTypes.arrayOf(PropTypes.object).isRequired
-        })
-        
-    };
+PostContainer.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired
+  })
+    
+};
 
 export default PostContainer;

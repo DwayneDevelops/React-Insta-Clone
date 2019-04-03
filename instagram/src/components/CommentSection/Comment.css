@@ -1,0 +1,12 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+    
+}
+
+h3 {
+    margin-right: .5%;
+        
+}
