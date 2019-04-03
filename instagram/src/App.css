@@ -1,7 +1,7 @@
 .App {
   display: flex;
-  margin: 0 auto;
-  max-width: 100%;
+  flex-direction: column;
+  max-width: 650px;
   width: 90%;
-  background-color: burlywood;
+  margin: 0 auto;
 }

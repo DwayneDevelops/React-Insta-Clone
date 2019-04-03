@@ -1,6 +1,8 @@
 import React from 'react';
 import Comment from './Comment';
 
+import './CommentSection.css'
+
 
 const CommentSection = props => {
     return (
@@ -11,13 +13,14 @@ const CommentSection = props => {
                     <i className="far fa-comment"></i>
                 </div>
 
-                <span>{props.post.likes}</span><span>Likes</span>
+                <strong>{props.post.likes}</strong><strong> likes</strong>
             </div>
             
             {props.post.comments.map( c => <Comment comment={c} key={c.id}/>)}
             
+            <span>2 HOURS AGO</span>
                       
-            <input value="" placeholder='Add a comment...' />
+            <input className="input" placeholder='Add a comment...'  />
         </div>
     )
 }
