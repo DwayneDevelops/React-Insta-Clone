@@ -2,9 +2,8 @@ import React from 'react';
 
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-
+import PostsPage from './components/PostContainer/PostsPage';
+ 
 class App extends React.Component {
   constructor() {
     super();
@@ -22,8 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />)}
+        <PostsPage posts={this.state.posts} />)}
       </div>
     );
   }

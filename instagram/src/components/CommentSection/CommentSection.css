@@ -14,7 +14,11 @@
     margin-top: 2%;
     border: none;
     font-size: 1.2rem;
-    border-top: 1px solid lightgray;
+    border-top: .25px solid lightgray;
+}
+
+.input:focus {
+    outline: none;
 }
 
 span {
