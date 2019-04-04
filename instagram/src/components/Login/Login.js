@@ -1,9 +1,12 @@
 import React from 'react'
 
 class Login extends React.Component {
-  state = {
-    username: '',
-    password: '',
+  constructor(props){
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+    }
   }
 
   change = e => {
@@ -13,20 +16,21 @@ class Login extends React.Component {
   };
 
   onSubmit = (e) => {
-    e.preventDefault();
+    const user = this.state.username;
+    // e.preventDefault();
     // this.props.onSubmit(this.state);
-    this.setState({
-      firstName: '',
-      lastName: '',
-      username: '',
-      email: '',
-      password: '',
-    })
+    localStorage.setItem('user', user)
+    window.location.reload();
+    // this.setState({
+    //   username: '',
+    //   password: '',
+    // })
   }
 
   render(){
     return(
-      <form>
+      <form className="login-form">
+        <h3>Welcome to the Instagram random stranger....sign in...</h3>
         <input 
         value={this.state.username}
         name='username'

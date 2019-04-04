@@ -9,8 +9,8 @@ import withAuthenticate from './authentication/withAuthenticate';
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
  
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: []
     };
