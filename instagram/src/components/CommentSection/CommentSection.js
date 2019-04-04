@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import Time from '../CommentSection/Time'
 
 
 
@@ -18,9 +19,9 @@ const CommentSection = props => {
                 <strong>{props.post.likes}</strong><strong> likes</strong>
             </div>
             
-            {props.post.comments.map( c => <Comment comment={c} key={c.id}/>)}
-            
-            <span>2 HOURS AGO</span>
+            {props.post.comments.map( c => <Comment comment={c} key={c.id} />)}
+
+            <Time time={props.post.timestamp}/>
                    
             <input className="input" placeholder='Add a comment...'  />
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
-import './Post.css'
+import './Post.css';
 
 const Post = (props) => {
     return(
@@ -12,6 +12,7 @@ const Post = (props) => {
             </div>
             <img src={props.post.imageUrl} alt='main post content' />
             <CommentSection post={props.post} />
+            
         </div>
     )
 }

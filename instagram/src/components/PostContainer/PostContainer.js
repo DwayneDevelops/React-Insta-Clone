@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
+import Time from '../CommentSection/Time';
 
-import './PostContainer.css'
+import './PostContainer.css';
 
 
 
 const PostContainer = props => {
   return (
     <div className='postContainer'>
-      {props.posts.map(p => <Post post={p} key={p.id} />)}
+  {props.posts.map(p => <Post post={p} key={p.id} />, p => <Time time={p} key={p.id}/>)}
     </div>        
   );
 }
