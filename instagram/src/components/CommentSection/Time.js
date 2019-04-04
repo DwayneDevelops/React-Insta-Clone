@@ -3,7 +3,7 @@ import moment from 'moment';
 
 function Time(props) {
     return(
-        <span>{moment(props.time.timestamp).startOf('hour').fromNow()}</span>
+        <span>{moment(props.time.timestamp).format('MMMM Do YYYY, hh:mm:ss a').fromNow()}</span>
     ) 
 }
 
