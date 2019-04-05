@@ -1,9 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 
-function Time(props) {
+
+function Time() {
     return(
-        <span>{moment(props.time.timestamp).startOf('hour').fromNow()}</span>
+        <span>2 HOURS AGO</span>
     ) 
 }
 

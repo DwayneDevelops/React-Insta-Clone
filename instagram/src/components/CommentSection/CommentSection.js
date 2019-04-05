@@ -2,20 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 import Time from '../CommentSection/Time'
 
-
-
 import './CommentSection.css'
-
-// let likes = props.likes
-
-// toggleItem = () => {
-//     if ( !props.likes ) {
-//         localStorage.setItem({ props.likes + 1 })
-//     } else {
-//         localStorage.removeItem({ props.likes - 1 })
-//     }
-//     this.setState({props.likes});
-// };
 
 const CommentSection = props => {
     return (
