@@ -13,15 +13,17 @@ class App extends React.Component {
     super(props);
     this.state = {
       posts: [],
-      likes: this.likes
     };
-
   }
    
-  toggleItem = () => {
-    console.log('hey')
-    this.setState({likes: this.likes + 1 })
+  toggleItem = (e) => {
+    this.setState({
+      likes: this.state.posts[0].likes ++ 
+    })
+    
   }
+  
+  
   
 
   componentDidMount() {
