@@ -12,12 +12,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
+      likes: this.likes
     };
 
   }
    
-  
+  toggleItem = () => {
+    console.log('hey')
+    this.setState({likes: this.likes + 1 })
+  }
   
 
   componentDidMount() {
@@ -28,7 +32,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ComponentFromWithAuthenticate posts={this.state.posts} />
+        <ComponentFromWithAuthenticate posts={this.state.posts}
+        toggleItem={this.toggleItem} />
       </div>
     );
   }

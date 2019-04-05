@@ -7,7 +7,8 @@ function PostsPage(props) {
     return (
         <div className="postsPage">
         <SearchBar />
-        <PostContainer posts={props.posts} />)}
+        <PostContainer posts={props.posts}
+        toggleItem={props.toggleItem} />)}
         </div>
     );
     

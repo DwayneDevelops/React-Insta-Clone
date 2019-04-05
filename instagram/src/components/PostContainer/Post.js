@@ -12,7 +12,8 @@ const Post = (props) => {
                 <h3>{props.post.username}</h3>
             </div>
             <img src={props.post.imageUrl} alt='main post content' />
-            <CommentSection post={props.post} />
+            <CommentSection post={props.post}
+            toggleItem={props.toggleItem} />
             
         </div>
     )

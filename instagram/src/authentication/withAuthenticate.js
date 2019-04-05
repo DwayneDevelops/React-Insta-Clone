@@ -17,7 +17,8 @@ const withAuthenticate = PostsPage => Login =>
       }
     }
     render(){
-    if (this.state.loggedIn) return <PostsPage  />;
+    if (this.state.loggedIn) return <PostsPage posts={this.props.posts}
+    toggleItem={this.props.toggleItem} />;
     return <Login />
     }
 

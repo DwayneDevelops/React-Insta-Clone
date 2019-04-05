@@ -8,7 +8,8 @@ import './PostContainer.css';
 const PostContainer = props => {
   return (
     <div className='postContainer'>
-      {props.posts.map(p => <Post post={p} key={p.id} />)}
+      {props.posts.map(p => <Post post={p} key={p.id}
+      toggleItem={props.toggleItem} />)}
     </div>        
   );
 }

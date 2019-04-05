@@ -3,6 +3,15 @@ import React from 'react';
 import './SearchBar.css'
 
 const SearchBar = props => {
+
+
+  // handleChange = e => { 
+  //   if (e.target.value !== ''){
+      
+  //   }
+
+  // }
+
   return (
     <div className='searchBar'>
       <div>
@@ -10,8 +19,9 @@ const SearchBar = props => {
       </div>
       <input
         type="text" 
+        className='serch-bar'
         placeholder='Search' 
-        onKeyDown={props.search} 
+        // onKeyDown={this.handleChange} 
       />
       <div className="headerIcons">
         <i className="far fa-compass"></i>
